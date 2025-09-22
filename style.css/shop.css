@@ -1,0 +1,151 @@
+body {
+  background-color: #1e1e2f;
+}
+
+.product-section {
+  padding: 50px 80px;
+  background-color: transparent;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #000;
+}
+
+.footer {
+  background-color: #f9f9f9;
+  padding: 50px 80px;
+  margin-top: 60px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section li {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.social-icons img {
+  width: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.subscribe-form button {
+  padding: 8px 16px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.subscribe-form button:hover {
+  background-color: #333333;
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    padding: 30px 20px;
+  }
+
+  .product-container {
+    gap: 20px;
+  }
+
+  .product-card h4 {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+  }
+}

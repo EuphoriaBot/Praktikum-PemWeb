@@ -3,84 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marionettist Scents</title>
+    <link rel="stylesheet" href="style.css/header.css" />
+    <link rel="stylesheet" href="style.css/profile.css" />
+    <title>Scentify</title>
   </head>
   <body>
-    <header>
-      <h1>Smells Like Marinoett</h1>
-      <nav>
-        <ul>
+    <header class="header">
+      <h1 class="logo">
+        <img class="logo-icon" src="icon/parfume-icon.png" />
+        Scentify
+      </h1>
+      <nav class="nav-header">
+        <ul class="ul-nav-header">
           <li><a href="#collection">Collection</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#shop">Shop</a></li>
           <li><a href="#samples">Sample</a></li>
           <li><a href="#gifts">Gifts</a></li>
         </ul>
+        <a href="#" class="book-demo">Book Demo</a>
       </nav>
     </header>
+    <div class="header-line"></div>
 
     <main>
-      <section id="collection">
-        <h2>Marionettist X Etoile</h2>
-        <p>The Art of Fragrance, A Stage of Elegance</p>
-        <article>
-          <h3>Velvet Strings</h3>
-          <p>Eau de Parfume</p>
-        </article>
-        <article>
-          <h3>Shadow Waltz</h3>
-          <p>Eau de Parfume</p>
-        </article>
-      </section>
-
-      <section id="about">
-        <h2>Tentang Kami</h2>
-        <p>
-          Marionettist Scents menghadirkan parfum yang terinspirasi dari seni
-          panggung dan keanggunan klasik. Setiap aroma adalah pertunjukan yang
-          menghidupkan karakter tersembunyi dalam diri anda
-        </p>
-      </section>
-
-      <section id="shop">
-        <h2>Belanja</h2>
-        <p>
-          Pilih dari koleksi parfum mewah dengan nuansa dramatis dan penuh
-          kepribadian
-        </p>
-      </section>
-
-      <section id="samples">
-        <h2>Coba Gratis</h2>
-        <p>
-          Dapatkan sampel parfum Marionettist dan rasakan harmoni wangi yang
-          berkelas
-        </p>
-      </section>
-
-      <section id="gifts">
-        <h2>Hadiah</h2>
-        <p>
-          Hadiahkan parfum penuh seni sebagai simbol elegansi untuk orang
-          terdekat
-        </p>
-      </section>
+      <div class="profile">
+        <div class="about-us">
+          <div>
+            <h2>About Us</h2>
+            <p>
+              Scentify is a fragrance destination that brings together a wide
+              selection of perfumes from various creators and brands. We aim to
+              provide a place where everyone can discover the scent that truly
+              reflects their personality.
+            </p>
+          </div>
+          <div>
+            <h2>Fragrance Philosphy</h2>
+            <p>
+              We believe every fragrance tells a story. From timeless classics
+              to modern blends, each creation offers a unique expression, giving
+              you the freedom to choose the perfect scent for any moment.
+            </p>
+          </div>
+          <div>
+            <h2>Our Commitmentd</h2>
+            <p>
+              At Scentify, we are committed to offering only authentic and
+              high-quality perfumes, with a carefully curated selection that
+              ensures every choice is meaningful and memorable.
+            </p>
+          </div>
+        </div>
+        <div>
+          <img class="perfume-profile" src="image/profile-parfume.png" alt="" />
+        </div>
+      </div>
     </main>
 
-    <aside>
-      <h2>Promo Spesial</h2>
-      <p>Diskon 25% untuk parfum debut "Velvet Strings" minggu ini</p>
-      <p><a href="#shop">Belanja Sekarang</a></p>
-    </aside>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Scentify</h3>
+          <p>
+            Scentify is dedicated to bring the highest quality, safe, and
+            natural perfume to you, with people first mindset.
+            <a href="#">Learn more about us</a>
+          </p>
+          <div class="social-icons">
+            <img src="icon/facebook-icon.png" alt="" />
+            <img src="icon/instagram-icon.png" alt="" />
+          </div>
+        </div>
 
-    <footer>
-      <p>&copy; 2025 Marionettist Scents. Semua hak cipta dilindungi</p>
-      <p>
-        Referensi desain:
-        <a href="https://minedot.com/collections/mine-x-bibit" target="_blank">
-          minedot.com
-        </a>
-      </p>
+        <div class="footer-section">
+          <h3>Help & FAQs</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Return & Exchange</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Wanna be Pen pals?</h3>
+          <p>
+            Subscribe and join the Scentify Crew to receive updates, access to
+            exclusive deals, and more.
+          </p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Enter your email address" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
