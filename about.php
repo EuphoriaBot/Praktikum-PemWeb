@@ -1,68 +1,75 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Scentify</title>
+    <link rel="stylesheet" href="./CSS/about.css" />
     <link rel="stylesheet" href="./CSS/header.css" />
     <link rel="stylesheet" href="./CSS/profile.css" />
-    <title>Scentify</title>
   </head>
   <body>
     <header class="header">
       <h1 class="logo">
-        <img class="logo-icon" src="./icon/parfume-icon.png" />
+        <img class="logo-icon" src="./icon/parfume-icon.png" alt="logo" />
         Scentify
       </h1>
       <nav class="nav-header">
         <ul class="ul-nav-header">
-          <li><a href="#collection">Collection</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./shop.html">Shop</a></li>
-          <li><a href="#samples">Sample</a></li>
-          <li><a href="#gifts">Gifts</a></li>
+          <li><a href="./dashboard.php">Home</a></li>
+          <li><a href="./about.php" class="active">About</a></li>
+          <li><a href="./shop.php">Shop</a></li>
         </ul>
-        <a href="#" class="book-demo">Book Demo</a>
+        <a href="#" class="logout">Logout</a>
       </nav>
     </header>
-    <div class="header-line"></div>
 
     <main>
-      <div class="profile">
-        <div class="about-us">
-          <div>
-            <h2>About Us</h2>
-            <p>
-              Scentify is a fragrance destination that brings together a wide
-              selection of perfumes from various creators and brands. We aim to
-              provide a place where everyone can discover the scent that truly
-              reflects their personality.
-            </p>
-          </div>
-          <div>
-            <h2>Fragrance Philosphy</h2>
-            <p>
-              We believe every fragrance tells a story. From timeless classics
-              to modern blends, each creation offers a unique expression, giving
-              you the freedom to choose the perfect scent for any moment.
-            </p>
-          </div>
-          <div>
-            <h2>Our Commitmentd</h2>
-            <p>
-              At Scentify, we are committed to offering only authentic and
-              high-quality perfumes, with a carefully curated selection that
-              ensures every choice is meaningful and memorable.
-            </p>
-          </div>
+      <section class="about-hero">
+        <h2>About Our Philosophy</h2>
+        <p>
+          Scentify is more than just a perfume shop, it is a journey to discover
+          your true scent identity. Inspired by nature and people, our
+          fragrances are designed to reflect individuality, authenticity, and
+          timeless elegance.
+        </p>
+      </section>
+
+      <section class="about-values">
+        <div class="value-box">
+          <img src="./image/qualityparfume.png" alt="Highest Quality" />
+          <h3>Highest Quality Perfume</h3>
+          <p>
+            Our raw materials are sourced from around the globe to create scents
+            that meet international standards.
+          </p>
         </div>
-        <div>
-          <img
-            class="perfume-profile"
-            src="./image/profile-parfume.png"
-            alt=""
-          />
+        <div class="value-box">
+          <img src="./image/authetication.png" alt="Authenticity" />
+          <h3>Authenticity & Personalisation</h3>
+          <p>
+            Every fragrance is unique, just like you. Create your signature
+            scent that makes heads turn.
+          </p>
         </div>
-      </div>
+        <div class="value-box">
+          <img src="./image/ingredient.png" alt="Safe & Transparent" />
+          <h3>Safe & Transparent</h3>
+          <p>
+            We believe in honesty. Our perfumes are made with transparency and
+            care for both people and nature.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

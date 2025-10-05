@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,13 +25,11 @@
       </h1>
       <nav class="nav-header">
         <ul class="ul-nav-header">
-          <li><a href="#collection">Collection</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./shop.html">Shop</a></li>
-          <li><a href="#samples">Sample</a></li>
-          <li><a href="#gifts">Gifts</a></li>
+          <li><a href="./dashboard.php">Home</a></li>
+          <li><a href="./about.php">About</a></li>
+          <li><a href="./shop.php">Shop</a></li>
         </ul>
-        <a href="#" class="book-demo">Book Demo</a>
+        <a href="#" class="logout">Logout</a>
       </nav>
     </header>
     <div class="header-line"></div>

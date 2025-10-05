@@ -67,7 +67,7 @@ body {
   color: #d6b9fc;
 }
 
-.book-demo {
+.logout {
   background: #d6b9fc; 
   color: #1e1e2f;
   padding: 8px 18px;
@@ -77,6 +77,6 @@ body {
   font-weight: bold;
 }
 
-.book-demo:hover {
+.logout:hover {
   background: #d6b9fc; 
 }

@@ -19,7 +19,7 @@ addToCartButtons.forEach(button => {
 
 const subscribeForm = document.querySelector(".subscribe-form");
 const emailInput = subscribeForm.querySelector("input[type='email']");
-const bookDemoBtn = document.querySelector(".book-demo");
+const bookDemoBtn = document.querySelector(".logout");
 
 subscribeForm.addEventListener("submit", (e) => {
     e.preventDefault();
