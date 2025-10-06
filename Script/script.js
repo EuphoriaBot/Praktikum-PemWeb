@@ -1,5 +1,3 @@
-console.log("tes kepanggil");
-
 const addToCartButtons = document.querySelectorAll(".product-overlay button");
 const notification = document.getElementById("cart-notification");
 
