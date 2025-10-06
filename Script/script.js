@@ -19,7 +19,6 @@ addToCartButtons.forEach(button => {
 
 const subscribeForm = document.querySelector(".subscribe-form");
 const emailInput = subscribeForm.querySelector("input[type='email']");
-const bookDemoBtn = document.querySelector(".logout");
 
 subscribeForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -30,9 +29,4 @@ subscribeForm.addEventListener("submit", (e) => {
         alert(`Terima kasih sudah subscribe: ${email}`);
         emailInput.value = "";
     }
-});
-
-bookDemoBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    alert("Book Demo berhasil, tim kami akan segera menghubungi Anda");
 });
