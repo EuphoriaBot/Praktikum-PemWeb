@@ -29,7 +29,7 @@ if (!isset($_SESSION['username'])) {
           <li><a href="./about.php">About</a></li>
           <li><a href="./shop.php">Shop</a></li>
         </ul>
-        <a href="#" class="logout">Logout</a>
+        <a href="logout.php" class="logout">Logout</a>
       </nav>
     </header>
     <div class="header-line"></div>
