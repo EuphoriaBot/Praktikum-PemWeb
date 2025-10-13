@@ -30,7 +30,7 @@ if (isset($_GET['menu'])) {
       </h1>
       <nav class="nav-header">
         <ul class="ul-nav-header">
-          <li><a href="./dashboard.php">Home</a></li>
+          <li><a href="./dashboard-user.php">Home</a></li>
           <li><a href="./about.php">About</a></li>
           <li><a href="./shop.php">Shop</a></li>
         </ul>

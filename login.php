@@ -1,24 +1,45 @@
 <?php
 session_start();
+include 'koneksi.php';
 
-if (isset($_SESSION['username'])) {
-    header("Location: dashboard.php");
-    exit();
-}
+// if (isset($_SESSION['username'])) {
+//     if ($_SESSION['role'] === 'admin') {
+//         header("Location: dashboard-admin.php");
+//     } else {
+//         header("Location: dashboard-user.php");
+//     }
+//     exit();
+// }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
-
-    if ($username === "Dimas" && $password === "057") {
-        $_SESSION['username'] = $username;
-        header("Location: dashboard.php");
-        exit();
+    $sql = "SELECT * FROM users WHERE username = '$username'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) { 
+        $row = $result->fetch_assoc();
+        if ($password === $row['password']) {
+            $_SESSION['username'] = $username;
+            if ($row['role'] == 'admin') {
+                $_SESSION['role'] = 'admin';
+                header("Location: dashboard-admin.php");
+                exit();
+            }   
+                else if ($row['role'] == 'user') {
+                $_SESSION['role'] = 'user';
+                header("Location: dashboard-user.php");
+                exit();
+            } 
+        } 
+        else {
+            $error = "Username atau password salah";
+        }
     } else {
         $error = "Username atau password salah";
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
