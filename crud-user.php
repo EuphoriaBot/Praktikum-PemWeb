@@ -2,33 +2,27 @@
 include 'koneksi.php';
 session_start();
 
-// Hanya admin yang bisa akses halaman ini
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     header("Location: login.php");
     exit();
 }
 
-// === CREATE ===
 if (isset($_POST['tambah'])) {
     $username = $_POST['username'];
-    $password = ($_POST['password']); // disimpan dalam bentuk hash
+    $password = ($_POST['password']); 
     $role = $_POST['role'];
 
     $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', '$role')";
     if ($conn->query($sql)) {
-        echo "<p>✅ User berhasil ditambahkan!</p>";
+        echo "<p>User berhasil ditambahkan!</p>";
     } else {
-        echo "<p>❌ Gagal menambah user: {$conn->error}</p>";
+        echo "<p>Gagal menambah user: {$conn->error}</p>";
     }
 }
-
-// === UPDATE ===
 if (isset($_POST['edit'])) {
     $id = $_POST['id'];
     $username = $_POST['username'];
     $role = $_POST['role'];
-
-    // Jika password diisi, update juga
     if (!empty($_POST['password'])) {
         $password = $_POST['password'];
         $sql = "UPDATE users SET username='$username', password='$password', role='$role' WHERE id=$id";
@@ -37,9 +31,9 @@ if (isset($_POST['edit'])) {
     }
 
     if ($conn->query($sql)) {
-        echo "<p>✅ Data user berhasil diperbarui!</p>";
+        echo "<p>Data user berhasil diperbarui!</p>";
     } else {
-        echo "<p>❌ Gagal update user: {$conn->error}</p>";
+        echo "<p>Gagal update user: {$conn->error}</p>";
     }
 }
 
@@ -48,13 +42,12 @@ if (isset($_GET['hapus'])) {
     $id = $_GET['hapus'];
     $sql = "DELETE FROM users WHERE id=$id";
     if ($conn->query($sql)) {
-        echo "<p>✅ User berhasil dihapus!</p>";
+        echo "<p>User berhasil dihapus!</p>";
     } else {
-        echo "<p>❌ Gagal hapus user: {$conn->error}</p>";
+        echo "<p>Gagal hapus user: {$conn->error}</p>";
     }
 }
 
-// === READ ===
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 ?>
@@ -95,9 +88,8 @@ $result = $conn->query($sql);
         <a href="logout.php" class="logout">Logout</a>
       </nav>
     </header>
-    <div class="header-line"></div>
+  <div class="header-line"></div>
 
-  <!-- Tambah User -->
   <form method="POST">
     <input type="text" name="username" placeholder="Username" required>
     <input type="password" name="password" placeholder="Password" required>
@@ -109,8 +101,6 @@ $result = $conn->query($sql);
   </form>
 
   <br>
-
-  <!-- Tabel User -->
   <table>
     <tr>
       <th>ID</th>

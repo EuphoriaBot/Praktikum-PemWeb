@@ -7,20 +7,18 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     exit();
 }
 
-// === CREATE ===
 if (isset($_POST['tambah'])) {
     $nama = $_POST['nama'];
     $harga = $_POST['harga'];
 
     $sql = "INSERT INTO parfume (nama, harga) VALUES ('$nama', '$harga')";
     if ($conn->query($sql)) {
-        echo "<p>✅ Data berhasil ditambahkan!</p>";
+        echo "<p>Data berhasil ditambahkan!</p>";
     } else {
-        echo "<p>❌ Gagal menambah data: {$conn->error}</p>";
+        echo "<p>Gagal menambah data: {$conn->error}</p>";
     }
 }
 
-// === UPDATE ===
 if (isset($_POST['edit'])) {
     $id = $_POST['id'];
     $nama = $_POST['nama'];
@@ -28,25 +26,23 @@ if (isset($_POST['edit'])) {
 
     $sql = "UPDATE parfume SET nama='$nama', harga='$harga' WHERE id=$id";
     if ($conn->query($sql)) {
-        echo "<p>✅ Data berhasil diperbarui!</p>";
+        echo "<p>Data berhasil diperbarui!</p>";
     } else {
-        echo "<p>❌ Gagal update data: {$conn->error}</p>";
+        echo "<p>Gagal update data: {$conn->error}</p>";
     }
 }
 
-// === DELETE ===
 if (isset($_GET['hapus'])) {
     $id = $_GET['hapus'];
 
     $sql = "DELETE FROM parfume WHERE id=$id";
     if ($conn->query($sql)) {
-        echo "<p>✅ Data berhasil dihapus!</p>";
+        echo "<p>Data berhasil dihapus!</p>";
     } else {
-        echo "<p>❌ Gagal hapus data: {$conn->error}</p>";
+        echo "<p>Gagal hapus data: {$conn->error}</p>";
     }
 }
 
-// === READ ===
 $sql = "SELECT * FROM parfume";
 $result = $conn->query($sql);
 ?>
