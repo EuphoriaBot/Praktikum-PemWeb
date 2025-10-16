@@ -1,57 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial;
-  background: #f4f0ff;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #1e1e2f;
+  color: #e0e0f0;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 40px auto;
-  background: white;
-  padding: 25px;
+  background: #2a2a3e;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 h2 {
   text-align: center;
-  color: #4b0082;
+  color: #d6b9fc;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* Form Styling */
+form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  background: #363650;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #d6b9fc;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px;
+  border: 1px solid #4e57ab;
+  border-radius: 8px;
+  background: #2a2a3e;
+  color: #e0e0f0;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #d6b9fc;
+  outline: none;
+  box-shadow: 0 0 8px rgba(214, 185, 252, 0.3);
+  background: #363650;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+button[type="submit"] {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #d6b9fc, #838ce5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #838ce5, #d6b9fc);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(214, 185, 252, 0.4);
+}
+
+/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-}
-
-th,
-td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
+  background: #2a2a3e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 th {
-  background: #b59eff;
+  background: linear-gradient(135deg, #d6b9fc, #838ce5);
   color: white;
+  padding: 16px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
-button {
-  background: #9c6efc;
-  border: none;
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #363650;
+  color: #e0e0f0;
+  font-size: 14px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background: #363650;
+  transition: background 0.2s ease;
+}
+
+/* Action Buttons */
+button[type="button"],
+.action-btn {
+  padding: 8px 14px;
+  background: #a259ff;
   color: white;
-  padding: 6px 10px;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.2s;
+  font-size: 13px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 0 4px;
 }
 
-button:hover {
-  background: #7b52d9;
+button[type="button"]:hover,
+.action-btn:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(162, 89, 255, 0.4);
 }
 
-input {
-  padding: 6px;
-  margin: 4px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+/* Edit Form dalam Tabel */
+form[style*="display:inline-block"] {
+  display: flex !important;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+form[style*="display:inline-block"] input,
+form[style*="display:inline-block"] select {
+  min-width: 120px;
+  padding: 8px;
+  font-size: 13px;
+}
+
+form[style*="display:inline-block"] button {
+  padding: 8px 12px;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Link Styling */
+a {
+  text-decoration: none;
+  color: #d6b9fc;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #838ce5;
+}
+
+/* Header dari crud-user.php */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 12px;
+  background-color: #1a1a29;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #4e57ab;
+  border-radius: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #d6b9fc;
+}
+
+.logo-icon {
+  width: 35px;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.ul-nav-header {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.ul-nav-header li a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.ul-nav-header li a:hover,
+.ul-nav-header li a.active {
+  color: #d6b9fc;
+}
+
+.logout {
+  background: linear-gradient(135deg, #d6b9fc, #838ce5);
+  color: #1e1e2f;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.logout:hover {
+  background: linear-gradient(135deg, #838ce5, #d6b9fc);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(214, 185, 252, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="number"],
+  select,
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ul-nav-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form[style*="display:inline-block"] {
+    width: 100%;
+  }
+
+  form[style*="display:inline-block"] input,
+  form[style*="display:inline-block"] select,
+  form[style*="display:inline-block"] button {
+    width: 100%;
+  }
 }

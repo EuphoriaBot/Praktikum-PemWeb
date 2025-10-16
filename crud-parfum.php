@@ -52,8 +52,7 @@ $result = $conn->query($sql);
 <head>
 <meta charset="UTF-8">
 <title>Kelola Parfum</title>
-<link rel="stylesheet" href="./CSS/header.css">
-<link rel="stylesheet" href="./CSS/shop.css">
+<link rel="stylesheet" href="./CSS/crud.css">
 </head>
 
 <body>

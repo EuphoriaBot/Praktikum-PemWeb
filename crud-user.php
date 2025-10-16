@@ -1,4 +1,5 @@
 <?php
+include 'header.php'
 include 'koneksi.php';
 session_start();
 
@@ -57,17 +58,7 @@ $result = $conn->query($sql);
 <head>
 <meta charset="UTF-8">
 <title>Kelola User</title>
-<link rel="stylesheet" href="./CSS/header.css">
-<link rel="stylesheet" href="./CSS/shop.css">
-<style>
-  .container { padding: 20px; }
-  table { width: 100%; border-collapse: collapse; }
-  th, td { padding: 10px; border: 1px solid #ccc; text-align: center; }
-  input[type=text], input[type=password], select {
-    padding: 5px;
-    border-radius: 5px;
-  }
-</style>
+<link rel="stylesheet" href="./CSS/crud.css">
 </head>
 
 <body>
