@@ -1,6 +1,5 @@
 <?php
-include 'header.php'
-include 'koneksi.php';
+include 'koneksi.php'
 session_start();
 
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
